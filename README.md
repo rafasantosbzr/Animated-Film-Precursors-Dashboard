@@ -1,8 +1,8 @@
 # 🎬 Awards Dashboard
 
-Welcome to the **Awards Dashboard** — your go-to visual hub for tracking major movie award contenders 🏆 from **2000 to the present**. This interactive table lets you explore how films performed across key award shows leading up to the **Academy Awards** (Oscars).
+Welcome to the **Best Animated Feature Dashboard** — your go-to visual hub for tracking major movie award contenders 🏆 from **2001 to the present**. This interactive table lets you explore how films performed across key award shows leading up to the **Academy Awards** (Oscars).
 
-🌐 **Live Demo:** [Awards Dashboard](http://awardsdashboard.s3-website.us-east-2.amazonaws.com/)
+🌐 **Live Demo:** [Best Animated Feature Dashboard](http://awardsdashboard.s3-website.us-east-2.amazonaws.com/)
 
 ---
 
@@ -14,16 +14,14 @@ Emoji	Award
 🏆  Golden Globes  
 🎥  BAFTA  
 🎬  Critics Choice  
-🎭  SAG Awards  
-🎞️  DGA (Directors Guild of America)  
+🎞️  DGA Annie Awards
 💰  PGA (Producers Guild of America)  
-✍️  WGA (Writers Guild of America)  
 🌟  ...and of course, the **Oscars**
 
 Key features include:
 
 - 🎨 Color-coded highlights for repeat nominees
-- 📅 Explore data from **2000 to the current year**
+- 📅 Explore data from **2001 to the current year**
 
 ---
 
@@ -62,7 +60,7 @@ It’s great for:
     │       AwardTable.js
     │
     └───data
-            awards.json
+            animated_features_awards.json
 
 ---
 
@@ -70,7 +68,7 @@ It’s great for:
 
 - 🔍 Add filters by genre, studio, or director
 - 📈 Include charts for stats (wins vs. noms)
-- 🗃️ Add historical award categories (e.g., Best Director, Actor)
+- 🗃️ Add historical award categories
 - 🧪 Unit testing with Jest & React Testing Library
 
 ---
