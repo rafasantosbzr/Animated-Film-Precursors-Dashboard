@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import awardsData from "./data/awards.json";
+import awardsData from "./data/animated_features_awards.json";
 import AwardTable from "./components/AwardTable";
 import "./App.css";
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Awards Dashboard</h1>
-      <div className="award-table-container">
+      <div className="table-sticky-wrapper">
         <AwardTable data={data} />
       </div>
     </div>

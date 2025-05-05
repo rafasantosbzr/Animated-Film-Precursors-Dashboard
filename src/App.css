@@ -1,102 +1,144 @@
+/* General Body Styles */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f2f2f2;
+  background-color: #f7f8fc;
+  color: #333;
 }
 
+/* Main Title */
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 40px 0;
   color: #2c3e50;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
 }
 
-.award-table {
+/* Table Container - Padding and Max Width */
+.award-table-container {
+  padding: 0 20px;
   max-width: 100%;
+  margin-bottom: 40px; /* Add bottom margin here */
+}
+
+/* NEW: Wrapper for Sticky Header Functionality */
+.table-sticky-wrapper {
+  max-height: 70vh; /* Adjust max height as needed */
+  overflow-y: auto; /* Enable vertical scroll *within* this wrapper */
+  position: relative; /* Needed for sticky positioning context */
+  border: 1px solid #dee2e6; /* Match table border */
+  border-radius: 8px; /* Match table border radius */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Match table shadow */
+}
+
+/* Modern Table Styling - Simplified as wrapper handles border/shadow */
+.award-table {
+  width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  margin: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background-color: white;
+  background-color: #ffffff;
+  /* Removed border, border-radius, box-shadow, margin, overflow: hidden */
 }
 
-.award-table th,
+/* Apply sticky positioning to the THEAD element */
+.award-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Table Header Cell Styling (TH) */
+.award-table thead th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 15px 12px;
+  text-align: center;
+  border-bottom: 2px solid #ced4da;
+  border-right: 1px solid #dee2e6;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.award-table thead th:last-child {
+  border-right: none;
+}
+
+/* Table Cell Styling (TD) */
 .award-table td {
   padding: 12px;
-  border: 1px solid #aaa;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
   text-align: center;
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
   vertical-align: middle;
-  height: 60px;
-  width: 150px;
-}
-
-.award-table thead th {
-  position: sticky;
-  top: 0;
-  background-color: #2c3e50;
-  color: white;
-  z-index: 2;
-}
-
-.award-table td:first-child {
-  background-color: #ecf0f1;
-  font-weight: 600;
-}
-
-.award-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.award-table tbody tr:hover {
-  background-color: #e1e1e1;
-}
-
-.highlight-oscar {
-  background-color: #ffe599;
-  font-weight: bold;
-}
-
-.highlight-cell {
-  background-color: #ffe599;
-}
-
-.highlight-repeat-1 {
-  background-color: #f0d0f5;
-  font-weight: normal;
-}
-.highlight-repeat-2 {
-  background-color: #f0d0f5;
-  font-weight: normal;
-}
-.highlight-repeat-3 {
-  background-color: #d0f0d6;
-  font-weight: normal;
-}
-.highlight-repeat-4 {
-  background-color: #f9e79f;
-  font-weight: normal;
-}
-
-.award-table th {
-  font-size: 16px;
-}
-
-.award-table td {
+  height: 55px;
   font-size: 14px;
   font-weight: 400;
 }
 
-.award-table td.highlight-oscar {
-  font-size: 15px;
-  font-weight: bold;
+.award-table td:last-child {
+  border-right: none;
 }
 
+.award-table td:first-child {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.award-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.award-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Highlight Colors */
+.highlight-oscar {
+  background-color: #fff3cd;
+  font-weight: 600;
+}
+
+.highlight-repeat-1 {
+  background-color: #fde6fa;
+  font-weight: normal;
+}
+
+.highlight-repeat-3 {
+  background-color: #e2f7e1;
+  font-weight: normal;
+}
+
+/* Styling for text parts within cells */
 .award-table span {
   display: inline-block;
-  padding: 0 4px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.award-table span.highlight-oscar {
+  background-color: #fff3cd;
+}
+.award-table span.highlight-repeat-1 {
+  background-color: #fde6fa;
+}
+.award-table span.highlight-repeat-3 {
+  background-color: #e2f7e1;
+}
+
+.award-table td.highlight-oscar {
+  background-color: #fff3cd;
+}
+.award-table td.highlight-repeat-1 {
+  background-color: #fde6fa;
+}
+.award-table td.highlight-repeat-3 {
+  background-color: #e2f7e1;
 }
